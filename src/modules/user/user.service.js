@@ -235,7 +235,7 @@ export const profileImage = asyncHandler(async (req, res, next) => {
 
 export const profileCoverImage = asyncHandler(async (req, res, next) => {
  
-  const oldUser = await DBservice.findOne({
+  const oldUser = await DBservice.findOne({ 
     model: UserModel,
     filter: { _id: req.user._id },
   });
