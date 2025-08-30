@@ -7,7 +7,7 @@ import {
 } from "../../utils/security/hash.secuirty.js";
 import { generateEncryotion } from "../../utils/security/encryption.secuirty.js";
 import { generateLoginCreadentials } from "../../utils/security/token.security.js";
-import { OAuth2Client } from "google-auth-library";
+import { OAuth2Client } from "google-auth-library"; 
 import { emailEvent } from "../../utils/events/email.event.js";
 import { customAlphabet } from "nanoid";
 import { sendVerificationCode } from "../../utils/email/send.Verification.js";

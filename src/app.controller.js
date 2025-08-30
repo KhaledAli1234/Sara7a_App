@@ -14,6 +14,9 @@ import morgan from "morgan";
 import helmet from "helmet"; 
 import chalk from "chalk";
 import { rateLimit } from "express-rate-limit";
+import { resizeImage } from "./utils/image/imageResizer.js";
+// import { cleanupJob } from "./jobs/cronJobs.js";
+
 
 async function bootstrab() {
   const app = express();
@@ -62,6 +65,7 @@ async function bootstrab() {
     res.json({ message: " invalid routing " });
   });
   app.use(globalErrorHandling);
+  // cleanupJob()
 
   return app.listen(port, () => {
     console.log(`server is running in port ${port} 🚀`);
